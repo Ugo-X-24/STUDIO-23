@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SECOND EDITION</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .top{
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 330px;
+}
+
+.top p{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.top a{
+    text-decoration: none;
+    color: beige;
+}
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-family: algerian;
+      font-size: 90px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #FFB6C1; /* Pink color from your design */
+      border-radius: 20px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .profile-img {
+      width: 350px;
+      height: 350px;
+      border-radius: 10%;
+      object-fit: fill;
+      border: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #2c2c2c;
+      margin-bottom: 15px;
+      font-family: algerian;
+      font-size: 30px;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+      font-family: agency fb;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Open button */
+    .menu-btn {
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      background: #333;
+      color: white;
+      border: none;
+      margin: 15px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    footer {
+    background-color: pink; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center-aligns text */
+    width: 100%; /* Ensures it spans the full width */
+    margin-top: auto; /* Pushes the footer to the bottom when using flexbox on body */
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: limit content width */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-around; /* Distributes space between items */
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    flex-basis: 100%; /* Make paragraph take full width on smaller screens */
+}
+
+.footer-content b{
+    color: white;
+}
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Open Sidebar Button -->
+  <button class="menu-btn" onclick="openNav()">☰ Menu</button>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeNav()">×</span>
+
+    <a href="front page .html">Home</a>
+    <a href="edition.html">Edition</a>
+    <a href="contact.html">Contact</a>
+    <a href="staff.html">Staff</a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+
+
+  <div class="container">
+    <h1>SECOND EDITION</h1>
+    
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="SaveTik.io_7629047673353456903_1.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="edition 2 page 2.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="edition 2 page 3.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="edition 2 page 4.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="edition 2 page 5.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="edition 2 page 9.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <img src="edition 2 page 7.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card">
+        <img src="editon 2 page 8.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 9 -->
+      <div class="card">
+        <img src="edition 2 page 9.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 10 -->
+      <div class="card">
+        <img src="edition 2 page 10.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+      <!-- Card 11 -->
+      <div class="card">
+        <img src="edition 2 page 11.jpeg" alt="Mbamara Ugochukwu" class="profile-img">
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+        <div class="footer-content">
+            <p><b>STUDIO 23 </b>copyright &copy; 2026 </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

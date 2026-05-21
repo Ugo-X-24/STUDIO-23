@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STUDIO 23</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .top{
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 330px;
+}
+
+.top p{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.top a{
+    text-decoration: none;
+    color: beige;
+}
+
+    .container {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-top: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+      font-family: algerian;
+      font-size: 90px;
+
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #333;
+      font-family: Drip Thorny;
+      font-size: 25px;
+      margin-top: -50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white; /* Pink color from your design */
+      border-radius: 20px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 480px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 6px solid white;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #2c2c2c;
+      margin-bottom: 15px;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+      font-family: Blackadder ITC;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Open button */
+    .menu-btn {
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      background: #333;
+      color: white;
+      border: none;
+      margin: 15px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    footer {
+    background-color: pink; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center-aligns text */
+    width: 100%; /* Ensures it spans the full width */
+    margin-top: auto; /* Pushes the footer to the bottom when using flexbox on body */
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: limit content width */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-around; /* Distributes space between items */
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    flex-basis: 100%; /* Make paragraph take full width on smaller screens */
+}
+
+.footer-content b{
+    color: white;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- Open Sidebar Button -->
+  <button class="menu-btn" onclick="openNav()">☰ Menu</button>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeNav()">×</span>
+
+    <a href="front page .html">Home</a>
+    <a href="edition.html">Edition</a>
+    <a href="contact.html">Contact</a>
+    <a href="staff.html">Staff</a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+
+  <div class="container">
+    <h1>WELCOME TO STUDIO 23</h1>
+    <h3>LETS FASHION FLOW LIKE BLOOD</h3>
+    
+    <div class="grid">
+      
+      <div class="card">
+        <img src="IMG_52221.JPG" alt="cover photo" class="profile-img">
+        <p class="bio">
+          Studio 23 captures that electric in-between: old enough for serious decisions, 
+          young enough to change your mind. We embrace strategic naivety—the boldness to 
+          try before you know all the rules.Studio 23 is a safe haven where people can express 
+          their fashion taste, exchange ideas and help give ideas or inspiration to others. 
+          It’s a fun place to be expressive without the judgement of people.
+          It’s not just a group of kids taking pics but a family brought together by a unified 
+          goal to showcase fashion. A desire as thick as blood.
+        </p>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <footer>
+        <div class="footer-content">
+            <p><b>STUDIO 23 </b>copyright &copy; 2026 </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

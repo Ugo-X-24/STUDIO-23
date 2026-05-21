@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+ .top{
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 330px;
+}
+
+.top p{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.top a{
+    text-decoration: none;
+    color: beige;
+}
+
+    .bio {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #444;
+      text-align: left;
+      font-family: agency fb;
+      font-size: 100px;
+      font-weight: bold;
+      color: red;
+    }
+
+    .contact{
+        font-size: 50px;
+        font-family: algerian;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Open button */
+    .menu-btn {
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px 15px;
+      background: #333;
+      color: white;
+      border: none;
+      margin: 15px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1000;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+
+    .sidebar a:hover {
+      background: #444;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
+    footer {
+    background-color: pink; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 0; /* Vertical padding */
+    text-align: center; /* Center-aligns text */
+    width: 100%; /* Ensures it spans the full width */
+    margin-top: auto; /* Pushes the footer to the bottom when using flexbox on body */
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: limit content width */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: space-around; /* Distributes space between items */
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 10px 0;
+    flex-basis: 100%; /* Make paragraph take full width on smaller screens */
+}
+
+.footer-content b{
+    color: white;
+}
+    </style>
+
+</head>
+<body>
+    
+    <!-- Open Sidebar Button -->
+  <button class="menu-btn" onclick="openNav()">☰ Menu</button>
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <span class="close-btn" onclick="closeNav()">×</span>
+
+    <a href="front page .html">Home</a>
+    <a href="edition.html">Edition</a>
+    <a href="contact.html">Contact</a>
+    <a href="staff.html">Staff</a>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+  </script>
+
+
+    <div class="contact">
+        <h1>Contct us on:</h1>
+        <p class="bio">
+          TIKTIOK @ STUDIO_23_FASHION
+        </p>
+        <p class="bio">
+          INSTAGRAM @ STUDIO_23_FASHION
+        </p>
+        
+    </div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p><b>STUDIO 23 </b>copyright &copy; 2026 </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
